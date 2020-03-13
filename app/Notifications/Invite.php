@@ -11,15 +11,15 @@ use Illuminate\Notifications\Notification;
 class Invite extends Notification
 {
     use Queueable;
-    public $fromUser;
+    public $details;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct($details)
     {
-        $this->fromUser = $user;
+        $this->details = $details;
     }
 
     /**
@@ -30,7 +30,7 @@ class Invite extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
 
     /**
@@ -56,7 +56,8 @@ class Invite extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'from' => $this->details['from'],
+            'data'=> 'Invite to Join this Event',
         ];
     }
 }

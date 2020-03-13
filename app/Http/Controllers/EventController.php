@@ -13,6 +13,10 @@ class EventController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|string',
+            'description' => 'required',
+            'sdate' => 'required',
+            'stime' => 'required',
+            'edate' => 'required',
         ]);
         $event = Event::create([
             'title' => $request['title'],

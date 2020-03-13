@@ -25,3 +25,6 @@ Route::get('/event', 'EventController@getEventDate');
 Route::get('/event/{id}', 'EventController@view');
 Route::get('/usersClient', 'UsersController@index');
 Route::get('/no', 'GuestController@push');
+Route::get('/getNotificationsCount','NotificationController@getNotificationsCount');
+Route::get('/makeAsRead','NotificationController@makeAsRead');
+

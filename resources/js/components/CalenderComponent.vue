@@ -43,7 +43,8 @@
                                 </select>
                             </div>
                             <div class="form-group p-md-2">
-                                <button v-for="user in fields.selected" @click="removeUser(fields.selected.user)" class="btn btn-primary m-1 text-left">
+                                <button v-for="user in fields.selected" @click="removeUser(fields.selected.user)"
+                                        class="btn btn-primary m-1 text-left">
                                     {{user.name}}<br>
                                     {{ user.email }}
                                 </button>
@@ -52,6 +53,8 @@
                                 <span class="fa fa-align-justify"></span>
                                 <input type="text" name="description" placeholder="Add Description"
                                        v-model="fields.description">
+                                <div v-if="errors && errors.description" class="text-danger">{{ errors.description[0] }}</div>
+
                             </div>
                             <div class="form-group">
                                 <label class="form-check-label">Repeat Days</label>
@@ -96,8 +99,8 @@
             return {
                 checkedDays: [],
                 fields: {
-                    selected:[],
-                    optionsFields:[],
+                    selected: [],
+                    optionsFields: [],
                 },
                 errors: {},
                 modalShow: false
@@ -132,8 +135,7 @@
                 });
 
             },
-            removeUser(user)
-            {
+            removeUser(user) {
                 this.fields.selected.splice(user);
             }
         },

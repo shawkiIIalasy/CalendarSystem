@@ -34,14 +34,30 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <span class="fa fa-globe"></span>
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre onclick="makeAsRead()">
+                            <span class="fa fa-globe" id="count"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">
-                                hey
-                            </a>
+
+                            @foreach(auth()->user()->unreadNotifications as $notification)
+                                <a class="dropdown-item" href="">
+                                    {{ $notification->data['data'] }}
+                                    <button class="btn btn-secondary">Yes</button>
+                                    <button class="btn btn-secondary">No</button>
+                                    <button class="btn btn-secondary">Maybe</button>
+                                </a>
+                            @endforeach
+                            @foreach(auth()->user()->readNotifications as $notification)
+                                <a class="dropdown-item" href="">
+                                    {{ $notification->data['data'] }}
+                                    <button class="btn btn-secondary">Yes</button>
+                                    <button class="btn btn-secondary">No</button>
+                                    <button class="btn btn-secondary">Maybe</button>
+                                </a>
+
+                            @endforeach
+
                         </div>
                     </li>
 
@@ -69,3 +85,32 @@
         </div>
     </div>
 </nav>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        getNotificationsCount();
+    });
+    function getNotificationsCount() {
+        $.ajax({
+            type: 'get', //THIS NEEDS TO BE GET
+            url: '/getNotificationsCount',
+            success: function (data) {
+                if(data!=0)
+                {
+                    var bell=document.getElementById('count');
+                    var badage=document.createElement('i');
+                    badage.innerHTML=data;
+                    bell.appendChild(badage);
+                }
+            }
+        });
+    }
+    function makeAsRead() {
+        $.ajax({
+            type: 'get', //THIS NEEDS TO BE GET
+            url: '/makeAsRead',
+            success: function (data) {
+               getNotificationsCount();
+            }
+        });
+    }
+</script>

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15e8b4be-ac07-46c5-8367-3c271ef7b4a8" name="Default Changelist" comment="" />
+    <list default="true" id="15e8b4be-ac07-46c5-8367-3c271ef7b4a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Message.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/Invite.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/Invite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_11_152209_create_messages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Element/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Element/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +32,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/CalendarSystem" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -131,6 +142,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -189,6 +201,8 @@
       <workItem from="1583909758566" duration="30000" />
       <workItem from="1583913426209" duration="23596000" />
       <workItem from="1583998924861" duration="301000" />
+      <workItem from="1584000868227" duration="4073000" />
+      <workItem from="1584051382655" duration="3589000" />
     </task>
     <servers />
   </component>
@@ -208,6 +222,10 @@
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="492" y="71" width="412" height="624" key="#com.intellij.ide.util.MemberChooser/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583929420328" />
+    <state x="455" y="13" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584003520808">
+      <screen x="41" y="27" width="1325" height="741" />
+    </state>
+    <state x="455" y="13" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1584003520808" />
     <state x="436" y="141" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583922989674">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
@@ -220,10 +238,10 @@
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="244" y="160" width="908" height="445" key="EditFileWatcherDialog/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583677654203" />
-    <state x="486" y="141" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583909786290">
+    <state x="486" y="141" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584008329242">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
-    <state x="486" y="141" width="424" height="484" key="FileChooserDialogImpl/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583909786290" />
+    <state x="486" y="141" width="424" height="484" key="FileChooserDialogImpl/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1584008329242" />
     <state width="1279" height="184" key="GridCell.Tab.0.bottom" timestamp="1583670550547">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
@@ -240,18 +258,23 @@
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state width="1279" height="184" key="GridCell.Tab.0.right/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583670550547" />
-    <state x="192" y="18" key="SettingsEditor" timestamp="1583929756633">
+    <state x="462" y="70" width="472" height="652" key="RollbackChangesDialog" timestamp="1584053611541">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
-    <state x="192" y="18" key="SettingsEditor/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583929756633" />
+    <state x="462" y="70" width="472" height="652" key="RollbackChangesDialog/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1584053611541" />
+    <state x="192" y="18" key="SettingsEditor" timestamp="1584004304169">
+      <screen x="41" y="27" width="1325" height="741" />
+    </state>
+    <state x="192" y="18" key="SettingsEditor/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1584004304169" />
     <state x="461" y="229" width="474" height="307" key="cloudConfig.SelfSettingsDialog" timestamp="1583929601574">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="461" y="229" width="474" height="307" key="cloudConfig.SelfSettingsDialog/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583929601574" />
-    <state x="357" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1583998925216">
+    <state x="357" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1584092048679">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="357" y="209" key="com.intellij.ide.util.TipDialog/1366.0.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1583998925216" />
+    <state x="357" y="209" key="com.intellij.ide.util.TipDialog/41.27.1325.741@41.27.1325.741" timestamp="1584092048679" />
     <state x="367" y="168" width="672" height="677" key="run.anything.popup" timestamp="1583670522849">
       <screen x="41" y="27" width="1325" height="741" />
     </state>

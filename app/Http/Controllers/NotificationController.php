@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Notifications\Invite;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Message;
+use App\Notifications\Invite;
 use App\User;
-use Illuminate\Support\Facades\Notification;
+
 class NotificationController extends Controller
 {
 
@@ -16,20 +14,31 @@ class NotificationController extends Controller
         $this->middleware('auth');
     }
 
-    public function pushNotify($userId,$toUserId,$message)
+    public function pushNotify($userId, $toUserId, $message)
     {
-        // user 2 sends a message to user 1
-        /*$message = new Message;
-        $message->setAttribute('from', $userId);
-        $message->setAttribute('to', $toUserId);
-        $message->setAttribute('message', $message);
-        $message->save();*/
-
         $fromUser = User::find($userId);
         $toUser = User::find($toUserId);
-
+        $details = [
+            'from' => $userId,
+            'to' => $toUserId,
+            'data' => $message
+        ];
         // send notification using the "user" model, when the user receives new message
-        $toUser->notify(new Invite($fromUser));
+        $toUser->notify(new Invite($details));
+    }
+
+    public function makeAsRead()
+    {
+        auth()->user()->unreadNotifications->markAsRead();
+        return response()->json(null, 200);
+    }
+
+    public function getNotificationsCount()
+    {
+        $count = auth()->user()->unreadNotifications->count();
+
+        return response()->json($count, 200);
+
     }
 
 }
